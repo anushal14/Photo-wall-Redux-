@@ -3,7 +3,7 @@ import List from "./List";
 import Title from "./Title";
 import AddPhoto from "./AddPhoto";
 import { Route } from "react-router-dom";
-import {removePost} from '../redux/actions'
+import Single from "./Single";
 
 class Main extends Component {
     constructor() {
@@ -25,6 +25,9 @@ class Main extends Component {
                 <AddPhoto {...this.props}/>
             )}/>
 
+            <Route path='/single/:id' render={(params)=>(
+                <Single {...this.props} {...params}/>
+            )}/>
         </div>
 
     }

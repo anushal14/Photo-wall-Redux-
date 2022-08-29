@@ -11,14 +11,13 @@ function List(props) {
             .sort(function(x,y){
                 return y.id - x.id
             })
-            .map((post) => <Photo key={post.id} post={post} onRemovePhoto={props.onRemovePhoto} />)}
+            .map((post) => <Photo key={post.id} post={post} index={post.id} {...props}/>)}
         </div>
     </div>
 }
 
 List.propTypes = {
     posts: PropTypes.array.isRequired,
-    onRemovePhoto: PropTypes.func.isRequired
 }
 
 export default List;

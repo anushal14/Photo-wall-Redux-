@@ -22,9 +22,7 @@ class Main extends Component {
             )} />
 
             <Route path="/AddPhoto" render={({history})=>(
-                <AddPhoto onAddPhoto={(addedPost)=>{
-                    history.push('/')
-                }}/>
+                <AddPhoto {...this.props}/>
             )}/>
 
         </div>

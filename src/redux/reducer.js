@@ -17,6 +17,7 @@ function post(state = posts,action){
     switch(action.type){
         case 'REMOVE_POST': return state.filter(post => post.id !== action.index)
         case 'ADD_POST' : return [...state,action.post]
+        case 'LOAD_POSTS': return action.posts
         default: return state
     }
     
